@@ -1,8 +1,21 @@
-# React + Vite
+# Employee Directory Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A take-home assessment: a searchable employee directory. It lists users from a REST API, filters them by name and company, and opens a detail page with contact and company information.
 
-Currently, two official plugins are available:
+**Stack:** React 18, Redux Toolkit, React Router, Vite, Tailwind CSS, Vitest + Testing Library.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Structure
+
+- `src/services`: API client (`UserService`) with unit tests
+- `src/store`: Redux store and users slice
+- `src/hooks`: `useUsers`, `useUserDetails`
+- `src/utils/UserFilters.js`: filter logic, unit tested
+- `src/components/users`: list, grid, card and detail views
+
+## Run
+
+```bash
+npm install
+npm run dev
+npm test
+```
